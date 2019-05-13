@@ -1,0 +1,112 @@
+*) Network Telemetry - describes how information from various data sources can be collected using a set of automated communication processes and transmitted to one or more receiving equipment for analysis tasks
+
+
+*) Open Networking Foundation (ONF)
+
+*) OpenFlow Protocol -
+	  - defines the interface between an OpenFlow Controller and an OpenFlow switch
+	  - allows the OpenFlow Controller(SDN eg : - onos, open daylight) to instruct the OpenFlow switch on how to handle incoming data packets
+
+*) SDN controller
+	  - onos is a sdn controller
+	  - provides separation between the control plane (controller) and data plane (switch) functions of networks using a protocol that modifies forwarding tables in network switches.
+
+*) P4 - Programming Protocol-Independent Packet Processors
+	  - it is programming language specific to packet forwarding
+
+*) OpenConfig - to automate common tasks in their network environment
+			  - to move the networking world to a dynamic, programmable infrastructure
+			  - replacement of cli configuration for device deployment
+			  - supports the use of vendor-neutral data models for configuring and managing multivendor networks.
+
+*) YANG - Yet Another Next Generation
+		- a data modeling language for the definition of data sent over network management protocols such as the NETCONF and RESTCONF
+		- modular language representing data structures in an XML tree format 
+
+*) NETCONF & RESTCONF
+			-  provides mechanisms to install, manipulate, and delete the configuration of network devices
+			-  it uses xml based data encoding(eg: -YANG) for the configuration data as well as the protocol messages.
+
+*) gRPC - An open source framework that provides secure and reliable transport of data.
+		- a remote procedure call developed by Google for low-latency, scalable distributions with mobile clients communicating to a cloud server
+		- carries gNMI, and provides the means to formulate and transmit data and operation requests
+
+*) gNMI Protocol - 
+				- is gRPC network management protocol developed by Google
+				- providesthe mechanism to install, manipulate, and delete the configuration of network devices
+				- also to view operational data.
+				- The content provided through gNMI can be modeled using YANG.
+
+*) gNOI - provides operations services, such as rebooting a device, pinging a device, and so on.
+
+*) opendaylight (odl) controller vs onos - sdn controller
+
+*) Stratum  - open source silicon-independent switch operating system for software defined networks. 
+			- building an open, minimal production-ready distribution for white box switches.
+			- exposes a set of next-generation SDN interfaces including P4Runtime  and OpenConfig,enabling interchangeability of forwarding devices and programmability of forwarding behaviors
+			- delivers a complete white box switch solution to realize the ‘software defined’ promise of SDN
+
+*) SONiC - it could use Stratum as implementation of SAI
+		 - is used as NOS
+
+*) SAI - 
+		- Solution to adapt the Disaggregation
+		- the standardized C language based APIs to program the network hardware tables
+		- User has to just use the SAI APIs to configure particular network feature of the silicon.
+		- a fully open multi-vendor abstraction interface that runs on switching chipsets from Broadcom, Cavium, Mellanox and more. 
+
+*) Network Operating System (NOS) - 
+		-  Apart from SONiC(eg of NOS), NOS can be an open switch (OPX), dNOS, ONL etc.
+		- it called sai api 
+
+*) Disaggregating Network - 
+		- The disaggregation means to decouple the network software and hardware.
+		- This is like buying a network silicon from any vendor and then loading a NOS of your choice
+		- Switching silicon hardware can be from Cavium, Broadcom, Barefoot, Centec, Mellanox etc. and NOS can be Open Switch (OPX), SONiC, dNOS etc.
+
+*) white box switch - 
+		- The network switch developed with the idea of network disaggregation
+		- enables ODM vendors to select the switching silicon and open source NOS of their own choice which makes it more scalable and price efficient.
+
+*) BGP 	- a routing protocol used to transfer data and information between different host gateways
+		- a Path Vector Protocol (PVP), which maintains paths to different hosts, networks and gateway routers and determines the routing decision based on that.		
+
+*) Data plane 	- refers to all the functions and processes that forward packets/frames from one interface to another.
+		- also known as Forwarding Plane
+		- Forwards traffic to the next hop along the path to the selected destination network according to control plane logic
+		- Data plane packets go through the router
+
+*) Control plane - refers to all the functions and processes that determine which path to use. Routing protocols, spanning tree, ldp, etc are examples.			
+		- Makes decisions about where traffic is sent
+
+*) Management plane - is all the functions you use to control and monitor devices.
+
+*) Remote Procedure Call (RPC) -  a protocol that one program can use to request a service from a program located in another computer on a network without having to understand the network's details.
+		- is also sometimes known as a function call or a subroutine call.
+		- uses the client-server model. 
+*) ONIE - an open source initiative that defines an open “install environment” for bare metal network switches
+		- Open Network Install Environment (ONIE)
+		- enables a bare metal network switch ecosystem where end users have a choice among different network operating systems.
+
+*) ASIC (Application-specific integrated circuit) in switches -
+		- is basically a CPU that is not a general purpose CPU but is a CPU for making switching decisions very quickly
+
+*) Open Network Linux - is a Linux distribution for open hardware switches,
+		- uses ONIE to install onto on-board flash memory.
+		- supports multiple switch fabric APIs including : SAI
+		- is compatible with most forwarding agents including : Azure SONiC
+
+
+*) ONOS - an SDN controller specifically designed for service providers.
+		- Intention is to create a software defined network operating systems intended to integrate all network applications
+		  and functions in a viritualized format
+
+*) Open vSwitch(OVS) - 
+		- is a virtual switch
+		- supports OpenFlow protocols
+
+*) Mininet  - A network emulator which can create virtual switches,hosts and connect to SDN controllers
+		- can be installed in your laptop and complex networking solutions and topologies can be tested out with ease	
+		- a tool to simulate an Open vSwitch-based network topology
+		- can write python script to interact with Mininet api
+

@@ -1,0 +1,10 @@
+*) open onos cli 
+	- $ONOS_ROOT/tools/test/bin/onos localhost
+	- onos localhost
+
+*) build onos with bazel
+	- Build ONOS with Bazel
+
+*) Start ONOS on local machine
+	- bazel run onos-local
+

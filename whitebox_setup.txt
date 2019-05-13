@@ -1,0 +1,39 @@
+  Steps to setup white box switches
+
+*) get a switch
+*) install Open Network Install Environment (ONIE) on switch to install SONiC image on switch
+		-  Open Networking Install Environment (ONIE) bootloader
+		- ref: https://github.com/Azure/SONiC/wiki/Quick-Start
+*) When NOS installation finishes, the box will reboot into SONiC by default.
+
+*) SONiC Login prompt. Use username admin and password YourPaSsWoRd to login for the first time.
+	username -  admin
+	password YourPaSsWoRd
+
+*) Configuration -
+		-   is managing configuration in a single source of truth - a redisDB instance that we refer as ConfigDB. Applications subscribe to 
+			ConfigDB and generate their running configuration correspondingly.
+
+*) install frrouting (frr) and configuration corresponding to route forwarding protocol (BGP, etc)
+
+
+*) Steps for adding virtual switch 
+
+*) install onos and run
+	-- cmd - bazel run onos-local -- clean debug
+
+*) install mininet - mininet is for create a virtual switch, manage network, etc
+	-- create vswitch and host
+	-- cmd - sudo mn --topo linear,2 --mac --switch ovsk,protocols=OpenFlow13 --controller remote --arp
+	-- cmd - sudo mn --controller=remote,ip=127.0.0.1,port=6633 --mac --topo=tree,2,2 --switch=ovsk,protocols=OpenFlow13
+
+   -- ref : https://wiki.onosproject.org/pages/viewpage.action?pageId=6358090
+   -- ref : https://onosproject.org/wp-content/uploads/2018/01/2-ONOS-Installation-and-Build.pdf
+
+*) activate the reactive forwarding app
+	- cmd - app activate org.onosproject.fwd
+
+*) now we can ping one host to another host
+
+*) host list will be available now
+	-- cmd - onos> hosts

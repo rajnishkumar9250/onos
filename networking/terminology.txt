@@ -1,0 +1,36 @@
+*) hub
+*) switch
+*) switch table(Ternary Content Addressable Memory(TCAM))
+	- ref: https://www.grandmetric.com/2018/03/08/how-does-switch-work-2/
+*) router
+*) routing table
+*) ping
+
+
+*) DHCP
+
+*) Access Point (AP)
+
+*) NAT
+
+*) Interface 
+
+*) autonomous systems (AS) - is a collection of ip address
+
+*) BGP -- a route exchange between autonomous systems
+
+*) External BGP (EBGP) - for use between ASs
+
+*) Internal BGP (IBGP) - for use within them.  
+
+
+*) VLAN (Virtual Local Area Network) -
+	--  acts like a physical LAN but it allows hosts to be grouped together in the same broadcast domain even if they are not connected to the same switch
+
+	ref : https://study-ccna.com/what-is-a-vlan/
+
+*) Virtual Routing and Forwarding (VRF) - to allow for the presence of multiple independent routing tables working simultaneously on the same router or switch
+
+*) FRRouting (FRR) - A system with FRR installed acts as a dedicated router. With FRR, your machine exchanges routing information with other routers using routing protocols . 
+	- FRR uses this information to update the kernel routing table so that the right data goes to the right place
+	- ref: http://docs.frrouting.org/en/latest/overview.html#about-frr

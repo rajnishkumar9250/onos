@@ -1,0 +1,39 @@
+{
+    "ports" : {
+        "of:0000000000000001/1" : {
+            "interfaces" : [
+                {
+                    "name" : "sw3",
+                    "ips"  : [ "10.0.2.1/16" ],
+                    "mac"  : "00:00:00:00:00:01"
+                },
+                {
+                    "name" : "s1_newinterface",
+                    "ips"  : [ "10.0.2.4/16" ],
+                    "mac"  : "00:00:00:00:00:02"
+                }
+            ]
+        }
+	},
+	"apps":  {
+		"org.onosproject.router" : {
+            "bgp" : {
+                "bgpSpeakers" : [
+                    {
+                        "name" : "speaker1",
+                        "connectPoint" : "of:0000000000000001/1",
+                        "peers" : [
+                            "10.0.1.1"
+                        ]
+                    }
+				]
+			},
+			"router" : {
+                "controlPlaneConnectPoint" : "of:0000000000000002/1",
+                "ospfEnabled" : "false",
+                "interfaces" : [ "s1"]
+            }
+		}
+	
+	}
+}

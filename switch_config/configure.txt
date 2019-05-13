@@ -1,0 +1,21 @@
+*) Steps for adding virtual switch
+
+*) install onos and run
+    -- cmd - bazel run onos-local -- clean debug
+
+*) install mininet - mininet is for create a virtual switch, manage network, etc
+    -- create vswithc and host
+    -- cmd - sudo mn --topo linear,2 --mac --switch ovsk,protocols=OpenFlow13 --controller remote --arp
+    -- cmd - sudo mn --controller=remote,ip=127.0.0.1,port=6633 --mac --topo=tree,2,2 --switch=ovsk,protocols=OpenFlow13
+
+   -- ref : https://wiki.onosproject.org/pages/viewpage.action?pageId=6358090
+   -- ref : https://onosproject.org/wp-content/uploads/2018/01/2-ONOS-Installation-and-Build.pdf
+
+*) activate the reactive forwarding app
+    - cmd - app activate org.onosproject.fwd
+
+*) now we can ping one host to another host
+
+*) host list will be available now
+    -- cmd - onos> hosts
+

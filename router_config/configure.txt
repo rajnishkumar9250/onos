@@ -1,0 +1,12 @@
+  Steps for configure Router
+
+*) First Configure switch
+
+*) Add wan to switch to make router
+
+*) activate softrouter driver to switch to make router
+	cmd - onos-netcfg 127.0.0.1 network-cfg.json
+
+	note - check file network-cfg.json in current directory
+
+	

@@ -1,0 +1,5 @@
+*) Onos exec from scratch -
+	cmd - bazel run onos-local clean debug
+
+*) open cli terminal - 
+	cmd - onos localhost
